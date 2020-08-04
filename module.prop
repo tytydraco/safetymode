@@ -1,0 +1,6 @@
+id=safetymode
+name=Safety Mode
+version=v1.0
+versionCode=1
+author=Draco
+description=Press volume up rapidly during early bootup to reboot in Magisk Core Only Mode.
