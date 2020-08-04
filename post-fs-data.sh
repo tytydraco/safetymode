@@ -18,6 +18,9 @@ do
 	fi
 
 	EVENT=`getevent -q -l -c 1`
+
+	[[ `cat /proc/uptime | awk '{print $1}' | awk -F. '{print $1}'` -ge 10 ]] && exit 0
+
 	echo "$EVENT" | grep KEY_VOLUMEDOWN | grep DOWN &&
 		DOWNCOUNT=$(($DOWNCOUNT + 1))
 	echo "$EVENT" | grep KEY_VOLUMEUP | grep DOWN &&
